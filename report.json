@@ -1,0 +1,54 @@
+{
+  "image": "synthetic://generated-sample",
+  "summary": {
+    "total_processes_pslist": 25,
+    "total_processes_psscan": 27,
+    "hidden_process_count": 2,
+    "malfind_hit_count": 3
+  },
+  "process_findings": [
+    {
+      "pid": 4208,
+      "name": "taskhost_svc.exe",
+      "ppid": null,
+      "flags": [
+        "hidden_from_pslist (present in psscan only)",
+        "orphaned_process (no valid parent)"
+      ],
+      "score": 85
+    },
+    {
+      "pid": 8435,
+      "name": "update_helper.exe",
+      "ppid": null,
+      "flags": [
+        "hidden_from_pslist (present in psscan only)",
+        "orphaned_process (no valid parent)"
+      ],
+      "score": 85
+    }
+  ],
+  "malfind_findings": [
+    {
+      "pid": 4208,
+      "process": "taskhost_svc.exe",
+      "start_vpn": "0x2f70c0e0",
+      "protection": "PAGE_EXECUTE_READWRITE",
+      "score": 100
+    },
+    {
+      "pid": 8435,
+      "process": "update_helper.exe",
+      "start_vpn": "0x19127c87",
+      "protection": "PAGE_EXECUTE_READWRITE",
+      "score": 100
+    },
+    {
+      "pid": 7682,
+      "process": "winword.exe",
+      "start_vpn": "0x3ba0a5a0",
+      "protection": "PAGE_EXECUTE_READWRITE",
+      "score": 100
+    }
+  ]
+}
